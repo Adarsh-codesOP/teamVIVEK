@@ -8,9 +8,12 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "team vivek",
+  description: "official website of team vivek",
+  generator: "Adarsh AS",
+  icons: {
+    icon: "https://oekyvgwbhszuceneipak.supabase.co/storage/v1/object/public/team/teamvivek.ico", // 👈 path to your favicon
+  },
 }
 
 export default function RootLayout({
