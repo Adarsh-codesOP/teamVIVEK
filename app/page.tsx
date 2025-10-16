@@ -39,7 +39,7 @@ export default function Home() {
             {/* Center tiger cutout, smaller and integrated */}
             <div className="mt-3 animate-fade-up">
               <Image
-                src="https://oekyvgwbhszuceneipak.supabase.co/storage/v1/object/public/team/teme.jpg"
+                src="https://oekyvgwbhszuceneipak.supabase.co/storage/v1/object/public/team/1000307301-removebg-preview.png"
                 alt="Tiger head emblem"
                 width={120}
                 height={120}
@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground animate-fade-up">
-              Experience the spirit, rhythm, and unity — bold gold and fiery accents over a refined charcoal canvas.
+             A symphony of courage, rhythm, and brotherhood — Pilinalike rises with the roar of tradition.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 animate-fade-up">
@@ -90,9 +90,9 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-[0_0_0_2px_var(--color-primary)] animate-in fade-in-50 slide-in-from-bottom-2">
-              <h2 className="mb-2 text-xl font-bold text-primary">The Tiger’s Den</h2>
+              <h2 className="mb-2 text-xl font-bold text-primary">Pilinalike 2025</h2>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Metallic gold primary with fiery orange and deep red accents, grounded by a near‑black charcoal canvas.
+                Pilinalike is more than a performance — it’s a pulse of pride, rhythm, and fire. Every step tells a story of courage, every roar echoes unity, and every movement blazes with the golden spirit of tradition. It’s not just seen — it’s felt.
               </p>
             </div>
 
