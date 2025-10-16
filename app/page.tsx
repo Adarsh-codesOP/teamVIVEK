@@ -27,7 +27,7 @@ export default function Home() {
       {/* Hero */}
       <section
         id="home"
-        className="relative isolate w-full border-b border-border bg-background/30 backdrop-blur-sm overflow-hidden section"
+        className="relative min-h-screen isolate w-full border-b border-border bg-background/30 backdrop-blur-sm overflow-hidden section"
       >
         <div className="relative z-10 mx-auto max-w-6xl px-4">
           <div className="flex flex-col items-center text-center">
