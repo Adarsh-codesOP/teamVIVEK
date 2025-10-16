@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Brand with placeholder logo and text */}
         <a href="#home" className="flex items-center gap-2" aria-label="Go to Home">
           <Image
-            src="/images/placeholder-logo.jpg"
+            src="https://oekyvgwbhszuceneipak.supabase.co/storage/v1/object/public/team/teamvivek.svg"
             alt="Team Vivek logo"
             width={36}
             height={36}

@@ -39,7 +39,7 @@ export default function Home() {
             {/* Center tiger cutout, smaller and integrated */}
             <div className="mt-3 animate-fade-up">
               <Image
-                src="/images/tiger-head-cutout.jpg"
+                src="https://oekyvgwbhszuceneipak.supabase.co/storage/v1/object/public/team/teme.jpg"
                 alt="Tiger head emblem"
                 width={120}
                 height={120}
