@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(15% 0 0 / 1); /* near-black #0B0B0D */
+  --foreground: oklch(96% 0 0 / 1); /* warm off-white for readability */
+
+  --card: oklch(18% 0 0 / 1); /* charcoal surface */
+  --card-foreground: var(--foreground);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  /* Brand + accents */
+  --primary: oklch(73% 0.12 90 / 1); /* metallic gold ~ #D4A017 */
+  --primary-foreground: oklch(18% 0 0 / 1); /* dark text on gold */
+
+  --secondary: oklch(22% 0 0 / 1); /* slightly lighter charcoal */
+  --secondary-foreground: var(--foreground);
+
+  --accent: oklch(65% 0.18 50 / 1); /* fiery orange ~ #FF6600 */
+  --accent-foreground: oklch(15% 0 0 / 1);
+
+  --destructive: oklch(45% 0.15 25 / 1); /* deep red ~ #A61D1D */
+  --destructive-foreground: oklch(98% 0 0 / 1);
+
+  /* UI structure */
+  --muted: oklch(25% 0 0 / 1);
+  --muted-foreground: oklch(75% 0 0 / 1);
+
+  --border: oklch(28% 0 0 / 1);
+  --input: var(--border);
+  --ring: oklch(73% 0.12 90 / 1); /* gold ring */
+
+  /* Charts map within the 5-color palette */
+  --chart-1: var(--primary); /* gold */
+  --chart-2: var(--accent); /* orange */
+  --chart-3: oklch(35% 0 0 / 1); /* mid charcoal (neutral) */
+  --chart-4: var(--destructive); /* deep red */
+  --chart-5: oklch(96% 0 0 / 1); /* off-white */
+
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: oklch(12% 0 0 / 1);
+  --foreground: oklch(98% 0 0 / 1);
+
+  --card: oklch(16% 0 0 / 1);
+  --card-foreground: var(--foreground);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(78% 0.14 90 / 1); /* brighter gold in dark */
+  --primary-foreground: oklch(14% 0 0 / 1);
+
+  --secondary: oklch(24% 0 0 / 1);
+  --secondary-foreground: var(--foreground);
+
+  --accent: oklch(70% 0.2 50 / 1); /* brighter orange */
+  --accent-foreground: oklch(14% 0 0 / 1);
+
+  --destructive: oklch(50% 0.16 25 / 1);
+  --destructive-foreground: oklch(98% 0 0 / 1);
+
+  --muted: oklch(26% 0 0 / 1);
+  --muted-foreground: oklch(78% 0 0 / 1);
+
+  --border: oklch(28% 0 0 / 1);
+  --input: var(--border);
+  --ring: var(--primary);
+
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: oklch(38% 0 0 / 1);
+  --chart-4: var(--destructive);
+  --chart-5: var(--foreground);
+
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* enable smooth scrolling and add section padding + anchor offset + navbar backdrop + animation alias */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    position: relative;
+    background-image: none !important; /* override previous background image */
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image: url("/images/tiger-skin-bengal.jpg");
+    background-size: 150% 150%;
+    background-position: center;
+    opacity: 0.14; /* subtle but more visible than before */
+    mix-blend-mode: normal;
+    filter: contrast(0.95) saturate(0.95);
+    transform: translateZ(0);
+  }
+}
+
+@layer utilities {
+  .section {
+    @apply py-12 md:py-16;
+  }
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+  .nav-backdrop {
+    @apply bg-background/80 backdrop-blur border-b border-border;
+  }
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+  .animate-fade-up {
+    animation: fade-up 650ms ease-out both;
+  }
+
+  /* tiger-skin clipped heading text */
+  .tiger-text {
+    background-image: url("/images/tiger-skin-bengal.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes float-slow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

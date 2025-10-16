@@ -1,0 +1,92 @@
+.gallery-container {
+  position: relative;
+  height: 320px; /* was 500px */
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-gradient {
+  display: none; /* hide both gradient edges */
+}
+
+.gallery-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* ensure track stays within container */
+}
+
+.gallery-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  width: max-content; /* expands to content width for proper drag constraints */
+  cursor: grab;
+}
+
+.gallery-item {
+  position: relative; /* was absolute in 3D setup */
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 12px; /* was 8% which caused excessive spacing */
+  backface-visibility: hidden;
+  flex: 0 0 auto;
+}
+
+.gallery-img {
+  pointer-events: none;
+  height: 180px; /* was 120px */
+  width: 320px; /* was 300px */
+  border-radius: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.04);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 1024px) {
+  .gallery-container {
+    height: 280px;
+  }
+  .gallery-img {
+    height: 160px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    height: 260px;
+  }
+  .gallery-track {
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .gallery-img {
+    height: 140px;
+    width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    height: 220px;
+  }
+  .gallery-track {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .gallery-img {
+    height: 120px;
+    width: 220px;
+  }
+}
